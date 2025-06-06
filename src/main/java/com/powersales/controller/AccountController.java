@@ -71,7 +71,7 @@ public class AccountController {
             String token = JwtUtil.generateToken (account.getId ());
             LoginResponse loginResponse = new LoginResponse ();
             loginResponse.setToken (token);
-            loginResponse.setTenantName (account.getTenantName ());
+            loginResponse.setAccount (account);
             return Result.success (loginResponse);
         }
         return Result.fail ("用户名或密码错误");

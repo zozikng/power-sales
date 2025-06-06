@@ -1,5 +1,6 @@
 package com.powersales.dto;
 
+import com.powersales.entity.Account;
 import lombok.Data;
 
 /**
@@ -11,5 +12,5 @@ import lombok.Data;
 @Data
 public class LoginResponse {
     private String token;
-    private String tenantName;
+    private Account account;
 }
